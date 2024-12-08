@@ -49,7 +49,7 @@ export default function Features(){
           Unbeatable prices
         </h4>
         <p className="font-['Satoshi'] text-[16px] leading-[150%] text-[#2A254B]">
-          For our materials and quality, you won't find better prices anywhere
+          For our materials and quality, you will not find better prices anywhere
         </p>
       </div>
     </div>
