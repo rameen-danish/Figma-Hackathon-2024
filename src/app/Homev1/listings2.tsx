@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 export default function Listing2() {
     return (
         <div className='w-full px-20 min-h-[100vh] py-24'>
