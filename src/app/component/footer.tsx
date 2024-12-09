@@ -4,7 +4,6 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillSkype } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
 import Link from "next/link";
-import ProductListingBlog from "../ProductListingBlog/page";
 export default function Footer(){
     return (
         <footer className="w-[1440px] h-[380px] bg-[#2A254B] relative">

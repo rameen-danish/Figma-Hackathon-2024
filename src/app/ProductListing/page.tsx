@@ -2,7 +2,7 @@ import Navbar from "./header";
 import Image from "next/image";
 import Listing1 from "./listing";
 import Email from "../Homev1/email";
-import Footer from "./footer";
+import Footer from "../component/footer";
 import Features from "../Homev1/features";
 
 export default function ProductListing(){
