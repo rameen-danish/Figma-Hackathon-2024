@@ -1,4 +1,5 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 export default function Listing1() {
     return (
         // <!-- Listings -->
@@ -59,11 +60,12 @@ export default function Listing1() {
  
 
   {/* <!-- Button --> */}
-  <button className="absolute w-[170px] h-[56px] left-[635px] top-[689px] bg-[#F9F9F9] flex flex-row items-start px-[32px] py-[16px] gap-[10px] box-border hover:bg-slate-500">
+  <Link href={"ProductListingBlog"}>
+  <button className="absolute w-[170px] h-[56px] left-[635px] top-[689px] bg-[#F9F9F9] flex flex-row items-start px-[32px] py-[16px] gap-[10px] box-border hover:bg-slate-300">
     <span className="w-[106px] h-[24px] text-[#2A254B] text-[16px] leading-[150%] font-['Satoshi'] font-normal">
       View Collection
     </span>
-  </button>
+  </button></Link>
 </div>
 
     )

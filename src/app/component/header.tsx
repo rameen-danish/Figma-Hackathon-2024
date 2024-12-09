@@ -1,8 +1,9 @@
+import Link from "next/link"
 export default function Navbar(){
     return(
         <div className="w-[1540px] h-[132px] bg-white flex-none order-0 flex-grow-0 relative">
    <div className="absolute w-[65px] h-[30px] left-[687px] top-[20px] font-clash-display text-[24px] leading-[30px] font-normal text-[#22202E]">
-  Avion
+   <Link href={"/"}>Avion</Link>
 </div><div className="absolute flex flex-row items-start gap-[44px] w-[675px] h-[22px] left-[382px] top-[90px]">
   <div className="w-[70px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">PlantPots</div>
   <div className="w-[66px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">Ceramics</div>
@@ -20,7 +21,7 @@ export default function Navbar(){
 
 {/* Shopping Cart*/}
 <div className="absolute w-[16px] h-[16px] left-[1364px] top-[26px] bg-white mix-blend-multiply">
-  <img className="absolute left-0 right-[9.3%] top-[6.25%] bottom-[625%] bg-[#2A254B]" src="Cart.png" alt="cart-logo"></img>
+<Link href={"Cart"}><img className="absolute left-0 right-[9.3%] top-[6.25%] bottom-[625%] bg-[#2A254B]" src="Cart.png" alt="cart-logo"></img></Link>
 </div>
 {/* Search */}
 <div className = "absolute w-[16px] h-[16px] left-[28px] top-[26px] bg-white mix-blend-multiply">

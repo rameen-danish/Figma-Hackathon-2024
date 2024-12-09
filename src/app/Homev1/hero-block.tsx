@@ -1,5 +1,5 @@
 
-
+import Link from "next/link"
 import Image from "next/image"
 export default function Homev1() {
     return (
@@ -16,14 +16,14 @@ export default function Homev1() {
                     </h2>
 
                     {/* <!-- Button Medium --> */}
-
-                    <button className="flex flex-row items-start px-8 py-4 gap-[10px] w-[170px] h-[56px] bg-[rgba(249,249,249,0.15)]">
+                    <Link href={"ProductListingBlog"}>
+                    <button className="flex flex-row items-start px-8 py-4 gap-[10px] w-[170px] h-[56px] bg-[rgba(249,249,249,0.15)] hover:bg-slate-500">
                         <span className="w-[106px] h-[24px] font-['Satoshi'] text-white text-[16px] leading-[150%] font-normal ">
-                            View Collection
+                        View Collection
                         </span>
                     </button>
-
-
+                    </Link>
+                    
                 </div>
 
                 {/* <!-- Right Image --> */}

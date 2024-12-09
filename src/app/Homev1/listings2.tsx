@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function Listing2() {
     return (
         <div className='w-full px-20 min-h-[100vh] py-24'>
@@ -68,9 +69,9 @@ export default function Listing2() {
                     </div>
                 </div>
 
-                <div className='pt-16 pl-[570px]'><button className="bg-[#F9F9F9] h-[56px] w-[200px]  flex justify-center items-center text-black hover:bg-slate-500 mt-8">
+                <div className='pt-16 pl-[570px]'><Link href={"ProductListingBlog"}><button className="bg-[#F9F9F9] h-[56px] w-[200px]  flex justify-center items-center text-black hover:bg-slate-300 mt-8">
                 View Collection
-          </button></div>  
+          </button></Link></div>  
   </div>     
         </div>
 

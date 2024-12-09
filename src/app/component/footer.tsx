@@ -3,17 +3,19 @@ import { CiFacebook } from "react-icons/ci";
 import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillSkype } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
+import Link from "next/link";
+import ProductListingBlog from "../ProductListingBlog/page";
 export default function Footer(){
     return (
         <footer className="w-[1540px] h-[380px] bg-[#2A254B] relative">
             {/* Menu */}
             <div className="absolute left-[82px] top-[58px] flex flex-col gap-[12px]">
-  <h2 className="text-white font-['Clash Display'] text-[16px] leading-[20px]">Menu</h2>
+            <Link href={"ProductListingBlog"}><h2 className="text-white font-['Clash Display'] text-[16px] leading-[20px]">Menu</h2></Link>
   <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">New arrivals</p>
   <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">Best sellers</p>
   <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">Recently viewed</p>
   <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">Popular this week</p>
-  <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">All products</p>
+  <Link href={"ProductListingBlog"}><p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">All products</p></Link>
 </div>
 
 {/* categories */}
