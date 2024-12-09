@@ -2,7 +2,7 @@ import Image from "next/image"
 export default function Features(){
     return(
     // <!-- Features Section -->
-<div className="w-[1540px] h-[355px] bg-white relative">
+<div className="w-[1440px] h-[355px] bg-white relative">
   
   {/* <!-- Section Title --> */}
   <h3 className="absolute w-[366px] h-[34px] left-[529px] top-[60px] font-['Clash_Display'] text-[24px] leading-[140%] font-normal text-[#2A254B]">

@@ -7,7 +7,7 @@ import Link from "next/link";
 import ProductListingBlog from "../ProductListingBlog/page";
 export default function Footer(){
     return (
-        <footer className="w-[1540px] h-[380px] bg-[#2A254B] relative">
+        <footer className="w-[1440px] h-[380px] bg-[#2A254B] relative">
             {/* Menu */}
             <div className="absolute left-[82px] top-[58px] flex flex-col gap-[12px]">
             <Link href={"ProductListingBlog"}><h2 className="text-white font-['Clash Display'] text-[16px] leading-[20px]">Menu</h2></Link>

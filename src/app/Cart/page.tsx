@@ -8,7 +8,7 @@ export default function Cart(){
     <div>
     <Navbar/>
     {/* Shopping Basket Conatiner */}
-    <div className="w-[1540px] h-[749px] bg-[#F9F9F9] relative">
+    <div className="w-[1440px] h-[749px] bg-[#F9F9F9] relative">
 
       {/* Shopping cart Title */}
     <h1 className="absolute left-[188px] top-[64px] w-[328px] h-[50px] 

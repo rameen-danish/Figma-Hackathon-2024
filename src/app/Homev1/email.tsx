@@ -1,7 +1,7 @@
 export default function Email(){
     return(
         // <!-- Email Sign-Up Section -->
-<div className="w-[1540px] h-[481px] bg-[#F9F9F9] flex-none order-5 flex-grow-0 flex justify-center items-center">
+<div className="w-[1440px] h-[481px] bg-[#F9F9F9] flex-none order-5 flex-grow-0 flex justify-center items-center">
   
   {/* <!-- Container --> */}
   <div className="relative w-[1273px] h-[364px] bg-white flex justify-center items-center">

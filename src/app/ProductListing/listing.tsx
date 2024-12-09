@@ -2,7 +2,7 @@ import Image from "next/image"
 export default function Listing1() {
     return (
         // <!-- Listings -->
-<div className="w-[1540px] h-[761px] bg-white relative">
+<div className="w-[1440px] h-[761px] bg-white relative">
   {/* <!-- New ceramics --> */}
   <h1 className="absolute w-[274px] h-[39px] left-[calc(50%-305px/2-487.5px)] top-[80px] font-clash font-normal text-[32px] whitespace-nowrap text-ellipsis leading-[39px] text-[#2A254B]">
   You might also like

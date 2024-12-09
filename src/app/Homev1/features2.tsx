@@ -2,7 +2,7 @@ import Image from "next/image"
 export default function Features2(){
     return(
         // <!-- Features Section -->
-<div className="w-[1540px] h-[603px] flex-none order-6 flex-grow-0 flex">
+<div className="w-[1440px] h-[603px] flex-none order-6 flex-grow-0 flex">
 
   {/* <!-- Left Content --> */}
   <div className="w-[720px] h-[603px] bg-white relative">

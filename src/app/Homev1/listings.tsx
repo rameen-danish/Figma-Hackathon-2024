@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Listing1() {
     return (
         // <!-- Listings -->
-<div className="w-[1540px] h-[761px] bg-white relative">
+<div className="w-[1440px] h-[761px] bg-white relative">
   {/* <!-- New ceramics --> */}
   <div className="absolute w-[217px] h-[39px] left-[80px] top-[80px] text-[#2A254B] text-[32px] leading-[39px] font-clash-display">
     New ceramics

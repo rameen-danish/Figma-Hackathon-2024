@@ -8,7 +8,7 @@ import Features from "../Homev1/features";
 export default function ProductListing(){
     return(
     <div>
-        <div className="relative w-[1540] h-[41px] bg-[#2A254B] flex items-center justify-center">
+        <div className="relative w-[1440] h-[41px] bg-[#2A254B] flex items-center justify-center">
   {/* Close Button */}
   <button className="absolute right-4 top-2 hover:opacity-80 flex items-center justify-center">
     <Image src={"/close.png"} alt="cart" width={30} height={30} />
@@ -28,7 +28,7 @@ export default function ProductListing(){
 <Navbar/>
 
 {/* Product Details */}
-<div className="w-[1540px] h-[759px] bg-white relative">
+<div className="w-[1440px] h-[759px] bg-white relative">
   {/* <!-- Image Left --> */}
   <Image className="absolute left-0 top-0 bg-cover]" src={"/Image Left.png"} alt="" width={721} height={759}/>
   

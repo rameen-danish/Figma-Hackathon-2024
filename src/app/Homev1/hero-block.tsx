@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 export default function Homev1() {
     return (
-        <div className="w-[1540px] h-[704px] bg-white relative">
+        <div className="w-[1440px] h-[704px] bg-white relative">
             {/* <!-- Container --> */}
             <div className="absolute w-[1280px] h-[584px] left-[80px] top-[60px] bg-[#2A254B]">
 

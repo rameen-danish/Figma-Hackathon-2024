@@ -1,7 +1,7 @@
 import Link from "next/link"
 export default function Navbar(){
     return(
-        <div className="w-[1540px] h-[132px] bg-white flex-none order-0 flex-grow-0 relative">
+        <div className="w-[1440px] h-[132px] bg-white flex-none order-0 flex-grow-0 relative">
    <div className="absolute w-[65px] h-[30px] left-[687px] top-[20px] font-clash-display text-[24px] leading-[30px] font-normal text-[#22202E]">
    <Link href={"/"}>Avion</Link>
 </div><div className="absolute flex flex-row items-start gap-[44px] w-[675px] h-[22px] left-[382px] top-[90px]">
