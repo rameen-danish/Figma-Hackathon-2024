@@ -8,9 +8,9 @@ import Features from "../Homev1/features";
 export default function ProductListing(){
     return(
     <div>
-        <div className="relative w-[1440] h-[41px] bg-[#2A254B] flex items-center justify-center">
+        <div className="relative w-[1440px] h-[41px] bg-[#2A254B] flex items-center justify-center">
   {/* Close Button */}
-  <button className="absolute right-4 top-2 hover:opacity-80 flex items-center justify-center">
+  <button className="absolute top-2 left-[1400px] hover:opacity-80 ">
     <Image src={"/close.png"} alt="cart" width={30} height={30} />
   </button>
   {/* Banner Content */}

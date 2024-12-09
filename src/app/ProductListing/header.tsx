@@ -1,9 +1,10 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 export default function Navbar(){
     return(
-        <div className="w-full h-20 bg-white flex-none order-1 grow-0 relative">
+        <div className="w-[1440px] h-20 bg-white flex-none order-1 grow-0 relative">
    <div className="absolute left-20 top-6 w-16 h-7 text-[24px] leading-[30px] font-[Clash Display] text-[#22202E]">
-  Avion
+   <Link href={"/"}>Avion</Link>
 </div>
 <div className="absolute left-[297px] top-[29px] flex flex-row items-start gap-11">
     <span className="text-[16px] leading-[22px] text-[#726E8D]">Plant pots</span>

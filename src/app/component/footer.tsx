@@ -30,7 +30,7 @@ export default function Footer(){
 {/* our company */}
 <div className="absolute left-[516px] top-[58px] flex flex-col gap-[12px]">
   <h2 className="text-white font-['Clash Display'] text-[16px] leading-[20px]">Our Company</h2>
-  <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">About us</p>
+  <Link href={"About"}><p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">About us</p></Link>
   <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">Vacancies</p>
   <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">Contact us</p>
   <p className="text-white font-['Satoshi'] text-[14px] leading-[19px]">Privacy</p>
