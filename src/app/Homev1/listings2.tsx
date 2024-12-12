@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Listing2() {
     return (
-        <div className='w-full bg-white px-20 min-h-[100vh] py-24'>
+        <div className='w-[1440px] bg-white px-20 min-h-[100vh] py-24'>
             {/* Heading */}
             <div className='mb-10'>
-                <h1 className='font-ClashDisplay text-[32px] font-normal'>
+                <h1 className='font-ClashDisplay text-[#2A254B] text-[32px] font-normal'>
                     Our popular products
                 </h1>
             </div>
@@ -26,7 +26,7 @@ export default function Listing2() {
                     </div>
                     {/* Text below the image */}
                     <div className="mt-4 text-start">
-                        <h1 className="font-medium text-[16px]">The Poplar suede sofa</h1>
+                        <h1 className="font-medium text-[#2A254B] text-[16px]">The Poplar suede sofa</h1>
                         <p className="text-[14px] text-gray-600">£980</p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ export default function Listing2() {
                     </div>
                     {/* Text below the image */}
                     <div className="mt-4 text-start">
-                        <h1 className="font-medium text-[16px]">The Dandy Chair</h1>
+                        <h1 className="font-medium text-[#2A254B] text-[16px]">The Dandy Chair</h1>
                         <p className="text-[14px] text-gray-600">£250</p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ export default function Listing2() {
                     </div>
                     {/* Text below the image */}
                     <div className="mt-4 text-start">
-                        <h1 className="font-medium text-[16px]">The Dandy Chair</h1>
+                        <h1 className="font-medium text-[#2A254B] text-[16px]">The Dandy Chair</h1>
                         <p className="text-[14px] text-gray-600">£250</p>
                     </div>
                 </div>
