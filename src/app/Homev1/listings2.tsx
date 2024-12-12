@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Listing2() {
     return (
-        <div className='w-full px-20 min-h-[100vh] py-24'>
+        <div className='w-full bg-white px-20 min-h-[100vh] py-24'>
             {/* Heading */}
             <div className='mb-10'>
                 <h1 className='font-ClashDisplay text-[32px] font-normal'>
