@@ -26,8 +26,8 @@ export default function Listing2() {
                     </div>
                     {/* Text below the image */}
                     <div className="mt-4 text-start">
-                        <h1 className="font-medium text-[#2A254B] text-[16px]">The Poplar suede sofa</h1>
-                        <p className="text-[14px] text-gray-600">£980</p>
+                        <h1 className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">The Poplar suede sofa</h1>
+                        <p className="text-[18px] text-gray-600 leading-[150%] font-satoshi top-[calc(50%-462px/2+2.5px)]">£980</p>
                     </div>
                 </div>
 
@@ -45,8 +45,8 @@ export default function Listing2() {
                     </div>
                     {/* Text below the image */}
                     <div className="mt-4 text-start">
-                        <h1 className="font-medium text-[#2A254B] text-[16px]">The Dandy Chair</h1>
-                        <p className="text-[14px] text-gray-600">£250</p>
+                        <h1 className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">The Dandy Chair</h1>
+                        <p className="text-[18px] text-gray-600 leading-[150%] font-satoshi">£250</p>
                     </div>
                 </div>
 
@@ -64,8 +64,8 @@ export default function Listing2() {
                     </div>
                     {/* Text below the image */}
                     <div className="mt-4 text-start">
-                        <h1 className="font-medium text-[#2A254B] text-[16px]">The Dandy Chair</h1>
-                        <p className="text-[14px] text-gray-600">£250</p>
+                        <h1 className=" text-[#2A254B] text-[20px] leading-[140%] font-clash-display">The Dandy Chair</h1>
+                        <p className="text-[18px] text-gray-600 leading-[150%] font-satoshi">£250</p>
                     </div>
                 </div>
 
