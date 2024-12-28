@@ -1,71 +1,61 @@
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
+interface ProductCardProps{
+  image: string;
+  title: string;
+  price: number;
+}
+
+function ProductCard({ image, title, price}:ProductCardProps) {
+  return (
+    <div className="flex flex-col items-start gap-4">
+      <div className="bg-gray-200 w-full h-[375px] relative">
+        <Image src={image} alt={title} layout="fill" className="object-cover" />
+      </div>
+      <h2 className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
+        {title}
+      </h2>
+      <p className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
+        £{price}
+      </p>
+    </div>
+  );
+}
+
 export default function Listing1() {
-    return (
-        // <!-- Listings -->
-<div className="w-[1440px] h-[761px] bg-white relative">
-  {/* <!-- New ceramics --> */}
-  <h1 className="absolute w-[274px] h-[39px] left-[calc(50%-305px/2-487.5px)] top-[80px] font-clash font-normal text-[32px] whitespace-nowrap text-ellipsis leading-[39px] text-[#2A254B]">
-  You might also like
-</h1>
+  const products = [
+    { image: "/Photo.png", title: "The Dandy Chair", price: 250 },
+    { image: "/Vase set.png", title: "Rustic Vase Set", price: 155 },
+    { image: "/Vase.png", title: "The Silky Vase", price: 125 },
+    { image: "/Lamp.png", title: "The Lucy Lamp", price: 399 },
+  ];
 
+  return (
+    <div className="bg-white py-10 px-4 md:px-20">
+      {/* Heading */}
+      <h1 className="text-[#2A254B] text-[32px] font-clash-display text-center mb-10">
+        You might also like
+      </h1>
 
-  {/* <!-- Product Card 1 --> */}
-  <div className="absolute w-[305px] h-[462px] left-[calc(50%-305px/2-487.5px)] top-[calc(50%-462px/2+2.5px)] flex flex-col items-start gap-[24px]">
-    <div className="relative w-full h-full"></div>
-    <Image className="flex flex-col items-start gap-[8px]" src={"/Photo.png"} alt="" width={305} height={375} />
-      <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
-        The Dandy chair
+      {/* Product Grid */}
+      <Link href={"/ProductListing"}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {products.map((product, index) => (
+          <ProductCard
+            key={index}
+            image={product.image}
+            title={product.title}
+            price={product.price}
+          />
+        ))}
       </div>
-      <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
-        £250
+      </Link>
+      {/* Button */}
+      <div className="flex justify-center mt-10">
+        <button className="bg-[#F9F9F9] hover:bg-slate-500 text-[#2A254B] text-[16px] font-satoshi font-normal py-3 px-6 rounded transition-all">
+          View Collection
+        </button>
       </div>
     </div>
-  {/* <!-- Product Card 2 --> */}
-  <div className="absolute w-[305px] h-[462px] left-[calc(50%-305px/2-162.5px)] top-[calc(50%-462px/2+2.5px)] flex flex-col items-start gap-[24px]">
-    <div className="relative w-full h-full"></div>
-    <Image className="flex flex-col items-start gap-[8px]" src={"/Vase set.png"} alt="" width={305} height={375} />
-      <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
-        Rustic Vase Set
-      </div>
-      <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
-        £155
-      </div>
-    </div>
-  
-
-  {/* <!-- Product Card 3 --> */}
-  <div className="absolute w-[305px] h-[462px] left-[calc(50%-305px/2+162.5px)] top-[calc(50%-462px/2+2.5px)] flex flex-col items-start gap-[24px]">
-    <div className="relative w-full h-full"></div>
-    <Image className="flex flex-col items-start gap-[8px]" src={"/Vase.png"} alt="" width={305} height={375} />
-      <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
-        The Silky Vase
-      </div>
-      <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
-        £125
-      </div>
-    </div>
-  
-
-  {/* <!-- Product Card 4 --> */}
-  <div className="absolute w-[305px] h-[462px] left-[calc(50%-305px/2+487.5px)] top-[calc(50%-462px/2+2.5px)] flex flex-col items-start gap-[24px]">
-    <div className="relative w-full h-full "></div>
-    <Image className="flex flex-col items-start gap-[8px]" src={"/Lamp.png"} alt="" width={305} height={375} />
-      <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
-        The Lucy Lamp
-      </div>
-      <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
-        £399
-      </div>
-    </div>
- 
-
-  {/* <!-- Button --> */}
-  <button className="absolute w-[170px] h-[56px] left-[635px] top-[689px] bg-[#F9F9F9] flex flex-row items-start px-[32px] py-[16px] gap-[10px] box-border hover:bg-slate-500">
-    <span className="w-[106px] h-[24px] text-[#2A254B] text-[16px] leading-[150%] font-['Satoshi'] font-normal">
-      View Collection
-    </span>
-  </button>
-</div>
-
-    )
+  );
 }

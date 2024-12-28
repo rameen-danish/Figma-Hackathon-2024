@@ -1,32 +1,59 @@
-import Link from "next/link"
-export default function Navbar(){
-    return(
-        <div className="w-[1440px] h-[132px] bg-white flex-none order-0 flex-grow-0 relative">
-   <div className="absolute w-[65px] h-[30px] left-[687px] top-[20px] font-clash-display text-[24px] leading-[30px] font-normal text-[#22202E]">
-   <Link href={"/"}>Avion</Link>
-</div><div className="absolute flex flex-row items-start gap-[44px] w-[675px] h-[22px] left-[382px] top-[90px]">
-  <div className="w-[70px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">PlantPots</div>
-  <div className="w-[66px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">Ceramics</div>
-  <div className="w-[44px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">Tables</div>
-  <div className="w-[45px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">Chairs</div>
-  <div className="w-[64px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">Crockery</div>
-  <div className="w-[71px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">Tableware</div>
-  <div className="w-[51px] h-[22px] font-satoshi text-[16px] leading-[22px] text-[#726E8D]">Cutlery</div>
-</div>
-<div className="absolute left-[1.94%] right-[1.81%] top-[70px] border border-[rgba(0,0,0,0.1)]"></div>
-{/* User Avatar */}
-<div className="absolute w-[16px] h-[16px] left-[1396px] top-[26px] bg-white mix-blend-multiply">
-  <img className="absolute inset-[6.25%] bg-[#2A254B]" src="User--avatar.png" alt="user-avatar"></img>
-</div>
+import Link from "next/link";
 
-{/* Shopping Cart*/}
-<div className="absolute w-[16px] h-[16px] left-[1364px] top-[26px] bg-white mix-blend-multiply">
-<Link href={"Cart"}><img className="absolute left-0 right-[9.3%] top-[6.25%] bottom-[625%] bg-[#2A254B]" src="Cart.png" alt="cart-logo"></img></Link>
-</div>
-{/* Search */}
-<div className = "absolute w-[16px] h-[16px] left-[28px] top-[26px] bg-white mix-blend-multiply">
-  <img className="absolute left-[6.14%] right-[9.37%] top-[6.14%] bottom-[9.38%] bg-[#2A254B]" src="Search.png" alt="search-logo"></img>
-</div>
-</div>
-    )
+export default function Navbar() {
+  return (
+    <div className="w-full bg-white flex flex-col sm:flex-row sm:items-center py-4 px-6 border-b border-gray-200">
+      {/* Logo */}
+      <div className="flex justify-center sm:justify-start sm:w-auto w-full mb-4 sm:mb-0">
+        <Link href={"/"} className="font-clash-display text-[24px] text-[#22202E]">
+          Avion
+        </Link>
+      </div>
+
+      {/* Menu Links */}
+      <div className="flex justify-center flex-wrap gap-6 sm:ml-auto">
+        <Link href="#" className="font-satoshi text-[16px] text-[#726E8D] hover:text-black transition">
+         Plant Pots
+        </Link>
+        <Link href="#" className="font-satoshi text-[16px] text-[#726E8D] hover:text-black transition">
+          Ceramics
+        </Link>
+        <Link href="#" className="font-satoshi text-[16px] text-[#726E8D] hover:text-black transition">
+          Tables
+        </Link>
+        <Link href="#" className="font-satoshi text-[16px] text-[#726E8D] hover:text-black transition">
+          Chairs
+        </Link>
+        <Link href="#" className="font-satoshi text-[16px] text-[#726E8D] hover:text-black transition">
+          Crockery
+        </Link>
+        <Link href="#" className="font-satoshi text-[16px] text-[#726E8D] hover:text-black transition">
+          Tableware
+        </Link>
+        <Link href="#" className="font-satoshi text-[16px] text-[#726E8D] hover:text-black transition">
+          Cutlery
+        </Link>
+      </div>
+
+      {/* Icons Section */}
+      <div className="flex items-center gap-4 ml-auto">
+        {/* Search Icon */}
+        <button className="w-[24px] h-[24px] flex items-center justify-center">
+          <img src="Search.png" alt="Search" className="w-full h-full object-contain" />
+        </button>
+
+        {/* Cart Icon */}
+        <Link href={"Cart"} className="w-[24px] h-[24px] flex items-center justify-center">
+
+            <img src="Cart.png" alt="Cart" className="w-full h-full object-contain" />
+          
+        </Link>
+
+        {/* User Avatar */}
+        <button className="w-[24px] h-[24px] flex items-center justify-center">
+          <img src="User--avatar.png" alt="User Avatar" className="w-full h-full object-contain" />
+        </button>
+      </div>
+    </div>
+  );
 }

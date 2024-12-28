@@ -3,108 +3,105 @@ import Image from "next/image";
 import Navbar from "../component/header";
 import Footer from "../component/footer";
 
-export default function Cart(){
+export default function Cart() {
+  const cartItems = [
+    {
+      id: 1,
+      image: "/ProductImage.png",
+      title: "Graystone vase",
+      description: "A timeless ceramic vase with a tri-color grey glaze.",
+      price: 85,
+      quantity: 1,
+    },
+    {
+      id: 2,
+      image: "/ProductImage1.png",
+      title: "Basic white vase",
+      description: "Beautiful and simple, this is one for the classics.",
+      price: 125,
+      quantity: 1,
+    },
+  ];
+
+  const calculateTotal = () =>
+    cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
   return (
     <div>
-    <Navbar/>
-    {/* Shopping Basket Conatiner */}
-    <div className="w-[1440px] h-[749px] bg-[#F9F9F9] relative">
+      <Navbar />
+      {/* Shopping Basket Container */}
+      <div className="w-full bg-[#F9F9F9] py-8">
+        {/* Shopping Cart Title */}
+        <div className="max-w-[1440px] mx-auto px-8">
+          <h1 className="text-2xl font-['Clash Display'] text-[#2A254B]">
+            Your shopping cart
+          </h1>
 
-      {/* Shopping cart Title */}
-    <h1 className="absolute left-[188px] top-[64px] w-[328px] h-[50px] 
-           font-['Clash Display'] text-[36px] leading-[140%] text-[#2A254B]">
-  Your shopping cart
-</h1>
-{/* Titles */}
-<h6 className="absolute left-[188px] top-[162px] w-[55px] h-[20px] font-[Clash Display] font-normal text-[14px] leading-[140%] text-[#2A254B]">
-  Product
-</h6>
-<h6 className="absolute left-[838px] top-[162px] w-[57px] h-[20px] font-[Clash Display] font-normal text-[14px] leading-[140%] text-[#2A254B]">
-  Quantity
-</h6>
-<h6 className="absolute left-[1212px] top-[162px] w-[34px] h-[20px] font-[Clash Display] font-normal text-[14px] leading-[140%] text-[#2A254B]">
-  Total
-</h6>
+          {/* Table Headers */}
+          <div className="grid grid-cols-3 mt-6 pb-2 border-b border-[#EBE8F4]">
+            <h6 className="text-sm text-[#2A254B]">Product</h6>
+            <h6 className="text-sm text-[#2A254B] text-center">Quantity</h6>
+            <h6 className="text-sm text-[#2A254B] text-right">Total</h6>
+          </div>
 
+          {/* Cart Items */}
+          {cartItems.map((item) => (
+            <div
+              key={item.id}
+              className="grid grid-cols-3 items-center py-6 border-b border-[#EBE8F4]"
+            >
+              {/* Product Details */}
+              <div className="flex items-center gap-4">
+                <Image src={item.image} alt={item.title} width={133} height={164} />
+                <div>
+                  <h4 className="text-lg text-[#2A254B] font-['Clash Display']">
+                    {item.title}
+                  </h4>
+                  <p className="text-sm text-[#2A254B] font-['Satoshi'] leading-[150%]">
+                    {item.description}
+                  </p>
+                  <span className="text-md text-[#2A254B] font-['Satoshi']">
+                    £{item.price}
+                  </span>
+                </div>
+              </div>
 
+              {/* Quantity Controls */}
+              <div className="flex items-center justify-center">
+                <div className="flex items-center bg-[#F9F9F9] px-4 py-2 gap-4">
+                  <button className="text-[#EBE8F4]">-</button>
+                  <span className="text-[#2A254B]">{item.quantity}</span>
+                  <button className="text-[#EBE8F4]">+</button>
+                </div>
+              </div>
 
-{/* Divider 1 */}
-<div className="absolute left-[188px] top-[194px] w-[1064px] border-t border-[#EBE8F4]"></div>
+              {/* Total Price */}
+              <div className="text-right text-[#2A254B] font-['Satoshi']">
+                £{item.price * item.quantity}
+              </div>
+            </div>
+          ))}
 
-
-{/* Product Section 1 */}
-<div className="absolute left-[188px] top-[214px] flex items-center gap-[21px] w-[309px] h-[134px]">
-  <Image src={"/ProductImage.png"} alt="product1" width={109} height={134}/>
-  <div className="flex flex-col items-start gap-[8px] w-[179px] h-[110px]">
-    <h4 className="font-['Clash Display'] text-[20px] text-[#2A254B]">Graystone vase</h4>
-    <p className="font-['Satoshi'] text-[14px] text-[#2A254B] leading-[150%]">
-      A timeless ceramic vase with a tri-color grey glaze.
-    </p>
-    <span className="font-['Satoshi'] text-[16px] text-[#2A254B]">£85</span>
-  </div>
-</div>
-
-{/* Product section 2 */}
-<div className="absolute left-[188px] top-[368px] flex items-center gap-[21px] w-[292px] h-[134px]">
-<Image src={"/ProductImage1.png"} alt="product1" width={109} height={134}/>
-  <div className="flex flex-col items-start gap-[8px] w-[162px] h-[110px]">
-    <h4 className="font-['Clash Display'] text-[20px] leading-[140%] text-[#2A254B]">
-      Basic white vase
-    </h4>
-    <p className="font-['Satoshi'] text-[14px] leading-[150%] text-[#2A254B]">
-      Beautiful and simple, this is one for the classics.
-    </p>
-    <span className="font-['Satoshi'] text-[16px] leading-[150%] text-[#2A254B]">£85</span>
-  </div>
-</div>
-
-
-{/* Stepper control */}
-<div className="absolute left-[838px] top-[226px] w-[122px] h-[46px] bg-[#F9F9F9] flex items-center justify-between px-4">
-  <span className="font-['Satoshi'] text-[16px] text-[#EBE8F4]">-</span>
-  <span className="font-['Satoshi'] text-[16px] text-[#2A254B]">1</span>
-  <span className="font-['Satoshi'] text-[16px] text-[#EBE8F4]">+</span>
-</div>
-<div className="absolute left-[838px] top-[380px] w-[122px] h-[46px] bg-[#F9F9F9] flex items-center justify-between px-4">
-  <span className="font-['Satoshi'] text-[16px] text-[#EBE8F4]">-</span>
-  <span className="font-['Satoshi'] text-[16px] text-[#2A254B]">1</span>
-  <span className="font-['Satoshi'] text-[16px] text-[#EBE8F4]">+</span>
-</div>
-
-{/* total values */}
-<p className="absolute left-[1212px] top-[225px] w-[33px] h-[27px] font-[Satoshi] font-normal text-[18px] leading-[150%] text-[#2A254B]">
-  £85
-</p>
-<p className="absolute left-[1209px] top-[380px] w-[38px] h-[27px] font-[Satoshi] font-normal text-[18px] leading-[150%] text-[#2A254B]">
-  £125
-</p>
-
-
-
-{/* Divider 2 */}
-<div className="absolute left-[188px] top-[534px] w-[1064px] border-t border-[#EBE8F4]"></div>
-
-
-{/* Price summary section */}
-<div className="absolute left-[970px] top-[562px] flex flex-col items-end gap-[12px] w-[282px]">
-  <div className="flex items-center gap-[16px] w-[150px]">
-    <span className="font-['Clash Display'] text-[20px] text-right text-[#4E4D93]">Subtotal</span>
-    <span className="font-['Clash Display'] text-[24px] text-right text-[#2A254B]">£210</span>
-  </div>
-  <p className="font-['Satoshi'] text-[14px] text-right text-[#4E4D93] leading-[150%]">
-    Taxes and shipping are calculated at checkout
-  </p>
-</div>
-
-{/* Checkout button */}
-<button className="absolute left-[1080px] top-[645px] w-[172px] h-[56px] bg-[#2A254B] 
-                flex items-center justify-center px-[32px] py-[16px] gap-[10px]">
-  <span className="font-['Satoshi'] text-[16px] text-white">Checkout</span>
-</button>
-
-
-    </div>
-    <Footer/>
+          {/* Price Summary Section */}
+          <div className="mt-8 flex flex-col items-end gap-4">
+            <div className="flex justify-between items-center gap-8">
+              <span className="text-lg font-['Clash Display'] text-[#4E4D93]">
+                Subtotal
+              </span>
+              <span className="text-xl font-['Clash Display'] text-[#2A254B]">
+                £{calculateTotal()}
+              </span>
+            </div>
+            <p className="text-sm text-[#4E4D93] font-['Satoshi']">
+              Taxes and shipping are calculated at checkout.
+            </p>
+            <button className="bg-[#2A254B] text-white px-6 py-3 rounded-md">
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
-};
+}

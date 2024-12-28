@@ -1,72 +1,96 @@
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Listing1() {
-    return (
-        // <!-- Listings -->
-<div className="w-[1440px] h-[761px] bg-white relative">
-  {/* <!-- New ceramics --> */}
-  <div className="absolute w-[217px] h-[39px] left-[80px] top-[80px] text-[#2A254B] text-[32px] leading-[39px] font-clash-display">
-    New ceramics
-  </div>
-
-  {/* <!-- Product Card 1 --> */}
-  <div className="absolute w-[305px] h-[462px] left-[calc(50%-305px/2-487.5px)] top-[calc(50%-462px/2+2.5px)] flex flex-col items-start gap-[24px]">
-    <div className="relative w-full h-full"></div>
-    <Image className="flex flex-col items-start gap-[8px]" src={"/Photo.png"} alt="" width={305} height={375} />
-      <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
-        The Dandy chair
+  return (
+    // Listings Section
+    <div className="w-full h-auto bg-white py-10">
+      {/* Title */}
+      <div className="text-[#2A254B] text-[24px] lg:text-[32px] leading-[39px] font-clash-display px-6 lg:px-20">
+        New ceramics
       </div>
-      <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
-        £250
+
+      {/* Product Cards */}
+      <div className="mt-10 px-6 lg:px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Product Card 1 */}
+        <Link href={"/ProductListing"}>
+        <div className="flex flex-col items-start gap-4">
+          <Image
+            src="/Photo.png"
+            alt="The Dandy chair"
+            width={305}
+            height={375}
+            className="w-full object-cover"
+          />
+          <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
+            The Dandy chair
+          </div>
+          <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
+            £250
+          </div>
+        </div>
+        </Link>
+
+        {/* Product Card 2 */}
+        <div className="flex flex-col items-start gap-4">
+          <Image
+            src="/Vase set.png"
+            alt="Rustic Vase Set"
+            width={305}
+            height={375}
+            className="w-full object-cover"
+          />
+          <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
+            Rustic Vase Set
+          </div>
+          <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
+            £155
+          </div>
+        </div>
+
+        {/* Product Card 3 */}
+        <div className="flex flex-col items-start gap-4">
+          <Image
+            src="/Vase.png"
+            alt="The Silky Vase"
+            width={305}
+            height={375}
+            className="w-full object-cover"
+          />
+          <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
+            The Silky Vase
+          </div>
+          <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
+            £125
+          </div>
+        </div>
+
+        {/* Product Card 4 */}
+        <div className="flex flex-col items-start gap-4">
+          <Image
+            src="/Lamp.png"
+            alt="The Lucy Lamp"
+            width={305}
+            height={375}
+            className="w-full object-cover"
+          />
+          <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
+            The Lucy Lamp
+          </div>
+          <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
+            £399
+          </div>
+        </div>
+      </div>
+
+      {/* Button */}
+      <div className="flex justify-center mt-10">
+        <Link href="ProductListingBlog">
+          <button className="w-[170px] h-[56px] bg-[#F9F9F9] hover:bg-slate-300 flex items-center justify-center text-[#2A254B] text-[16px] font-satoshi font-normal transition-all">
+            View Collection
+          </button>
+        </Link>
       </div>
     </div>
-  {/* <!-- Product Card 2 --> */}
-  <div className="absolute w-[305px] h-[462px] left-[calc(50%-305px/2-162.5px)] top-[calc(50%-462px/2+2.5px)] flex flex-col items-start gap-[24px]">
-    <div className="relative w-full h-full"></div>
-    <Image className="flex flex-col items-start gap-[8px]" src={"/Vase set.png"} alt="" width={305} height={375} />
-      <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
-        Rustic Vase Set
-      </div>
-      <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
-        £155
-      </div>
-    </div>
-  
-
-  {/* <!-- Product Card 3 --> */}
-  <div className="absolute w-[305px] h-[462px] left-[calc(50%-305px/2+162.5px)] top-[calc(50%-462px/2+2.5px)] flex flex-col items-start gap-[24px]">
-    <div className="relative w-full h-full"></div>
-    <Image className="flex flex-col items-start gap-[8px]" src={"/Vase.png"} alt="" width={305} height={375} />
-      <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
-        The Silky Vase
-      </div>
-      <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
-        £125
-      </div>
-    </div>
-  
-
-  {/* <!-- Product Card 4 --> */}
-  <div className="absolute w-[305px] h-[462px] left-[calc(50%-305px/2+487.5px)] top-[calc(50%-462px/2+2.5px)] flex flex-col items-start gap-[24px]">
-    <div className="relative w-full h-full "></div>
-    <Image className="flex flex-col items-start gap-[8px]" src={"/Lamp.png"} alt="" width={305} height={375} />
-      <div className="text-[#2A254B] text-[20px] leading-[140%] font-clash-display">
-        The Lucy Lamp
-      </div>
-      <div className="text-[#2A254B] text-[18px] leading-[150%] font-satoshi">
-        £399
-      </div>
-    </div>
- 
-
-  {/* <!-- Button --> */}
-  <Link href={"ProductListingBlog"}>
-  <button className="absolute w-[170px] h-[56px] left-[635px] top-[689px] bg-[#F9F9F9] flex flex-row items-start px-[32px] py-[16px] gap-[10px] box-border hover:bg-slate-300">
-    <span className="w-[106px] h-[24px] text-[#2A254B] text-[16px] leading-[150%] font-['Satoshi'] font-normal">
-      View Collection
-    </span>
-  </button></Link>
-</div>
-
-    )
+  );
 }

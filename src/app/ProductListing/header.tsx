@@ -1,44 +1,56 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function Navbar(){
-    return(
-        <div className="w-[1440px] h-20 bg-white flex-none order-1 grow-0 relative">
-   <div className="absolute left-20 top-6 w-16 h-7 text-[24px] leading-[30px] font-[Clash Display] text-[#22202E]">
-   <Link href={"/"}>Avion</Link>
-</div>
-<div className="absolute left-[297px] top-[29px] flex flex-row items-start gap-11">
-    <span className="text-[16px] leading-[22px] text-[#726E8D]">Plant pots</span>
-    <span className="text-[16px] leading-[22px] text-[#726E8D]">Ceramics</span>
-    <span className="text-[16px] leading-[22px] text-[#726E8D]">Tables</span>
-    <span className="text-[16px] leading-[22px] text-[#726E8D]">Chairs</span>
-    <span className="text-[16px] leading-[22px] text-[#726E8D]">Crockery</span>
-    <span className="text-[16px] leading-[22px] text-[#726E8D]">Tableware</span>
-    <span className="text-[16px] leading-[22px] text-[#726E8D]">Cutlery</span>
-  </div>
-<div className="absolute left-[1.94%] right-[1.81%] top-[70px] border border-[rgba(0,0,0,0.1)]"></div>
 
-{/* <!-- Side Actions --> */}
-<div className="relative left-[1280px] top-[30px] flex flex-row items-start gap-4 w-20 h-4">
-    {/* Search */}
-<div className = "absolute left-[28px] top-[5px] bg-white mix-blend-multiply">
-  <Image  src={"/Search.png"} alt="search-logo" width={16} height={16}/>
-</div>
+export default function Navbar() {
+  return (
+    <nav className="w-full bg-white flex flex-col sm:flex-row items-center justify-between px-6 py-4 border-b border-gray-200">
+      {/* Logo */}
+      <div className="text-[24px] leading-[30px] font-[Clash Display] text-[#22202E]">
+        <Link href={"/"}>Avion</Link>
+      </div>
 
-{/* Shopping Cart*/}
-<div className="absolute left-[58px] top-[5px] bg-white mix-blend-multiply">
-  <Image src={"/Cart.png"} alt="cart-logo" width={16} height={16} />
-</div>
+      {/* Navigation Links */}
+      <div className="flex flex-wrap justify-center gap-6 mt-4 sm:mt-0">
+        <Link href="#" className="text-[16px] leading-[22px] text-[#726E8D] hover:text-black transition">
+            Plant pots
+        </Link>
+        <Link href="#" className="text-[16px] leading-[22px] text-[#726E8D] hover:text-black transition">
+            Ceramics
+        </Link>
+        <Link href="#" className="text-[16px] leading-[22px] text-[#726E8D] hover:text-black transition">
+            Tables
+        </Link>
+        <Link href="#" className="text-[16px] leading-[22px] text-[#726E8D] hover:text-black transition">
+            Chairs
+        </Link>
+        <Link href="#" className="text-[16px] leading-[22px] text-[#726E8D] hover:text-black transition">
+            Crockery
+        </Link>
+        <Link href="#" className="text-[16px] leading-[22px] text-[#726E8D] hover:text-black transition">
+            Tableware
+        </Link>
+        <Link href="#" className="text-[16px] leading-[22px] text-[#726E8D] hover:text-black transition">
+            Cutlery
+        </Link>
+      </div>
 
-  {/* User Avatar */}
-<div className="absolute w-[16px] h-[16px] left-[88px] top-[5px] bg-white mix-blend-multiply">
-  <img  className="absolute inset-[6.25%]" src={"/User--avatar.png"} alt="user-avatar"/>
-</div>
+      {/* Side Actions */}
+      <div className="flex items-center gap-4 mt-4 sm:mt-0">
+        {/* Search */}
+        <button className="w-5 h-5 flex items-center justify-center">
+          <Image src={"/Search.png"} alt="Search" width={16} height={16} />
+        </button>
 
+        {/* Shopping Cart */}
+        <button className="w-5 h-5 flex items-center justify-center">
+          <Image src={"/Cart.png"} alt="Cart" width={16} height={16} />
+        </button>
 
-
-</div>
-
-    
-</div>
-    )
+        {/* User Avatar */}
+        <button className="w-5 h-5 flex items-center justify-center">
+          <Image src={"/User--avatar.png"} alt="User Avatar" width={16} height={16} />
+        </button>
+      </div>
+    </nav>
+  );
 }
