@@ -14,7 +14,7 @@ export default function Listing2() {
       {/* Responsive grid */}
       <div className="max-w-[1308px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Column 1 (spans 2 columns on large screens) */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 hover:scale-105 transition-all duration-300">
           <div className="bg-[#F5F5F5] flex justify-center items-center">
             <div className="relative w-full h-[375px]">
               <Image
@@ -39,7 +39,7 @@ export default function Listing2() {
         {/* Column 2 */}
         <Link href={"/ProductListing"}>
         <div>
-          <div className="bg-[#F5F5F5] flex justify-center items-center">
+          <div className="bg-[#F5F5F5] flex justify-center items-center hover:scale-105 transition-all duration-300">
             <div className="relative w-full h-[375px]">
               <Image
                 src="/Right Image.png"
@@ -63,7 +63,7 @@ export default function Listing2() {
         {/* Column 3 */}
         <Link href={"/ProductListing"}>
         <div>
-          <div className="bg-[#F5F5F5] flex justify-center items-center">
+          <div className="bg-[#F5F5F5] flex justify-center items-center hover:scale-105 transition-all duration-300">
             <div className="relative w-full h-[375px]">
               <Image
                 src="/Chair.png"

@@ -15,7 +15,7 @@ export default function Homev1() {
 
           {/* Button */}
           <Link href={"ProductListingBlog"}>
-            <button className="px-6 py-3 bg-[rgba(249,249,249,0.15)] hover:bg-slate-500 transition-all">
+            <button className="px-6 py-3 bg-[rgba(249,249,249,0.15)] hover:bg-slate-500 transition-all hover:scale-105 transition-all duration-300">
               <span className="text-[16px] leading-[150%] text-white font-normal">
                 View Collection
               </span>

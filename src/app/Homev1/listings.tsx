@@ -14,7 +14,7 @@ export default function Listing1() {
       <div className="mt-10 px-6 lg:px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Product Card 1 */}
         <Link href={"/ProductListing"}>
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 hover:scale-105 transition-all duration-300">
           <Image
             src="/Photo.png"
             alt="The Dandy chair"
@@ -32,7 +32,7 @@ export default function Listing1() {
         </Link>
 
         {/* Product Card 2 */}
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 hover:scale-105 transition-all duration-300">
           <Image
             src="/Vase set.png"
             alt="Rustic Vase Set"
@@ -49,7 +49,7 @@ export default function Listing1() {
         </div>
 
         {/* Product Card 3 */}
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 hover:scale-105 transition-all duration-300">
           <Image
             src="/Vase.png"
             alt="The Silky Vase"
@@ -66,7 +66,7 @@ export default function Listing1() {
         </div>
 
         {/* Product Card 4 */}
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 hover:scale-105 transition-all duration-300">
           <Image
             src="/Lamp.png"
             alt="The Lucy Lamp"

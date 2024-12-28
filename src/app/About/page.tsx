@@ -30,7 +30,7 @@ export default function About() {
                     quality and outstanding customer service
                 </h1>
                 <Link href={"ProductListingBlog"}>
-                    <button className=" w-full flex flex-row justify-center items-center px-8 py-4 gap-2 mt-4 lg:w-[192px] lg:h-[56px] bg-[#F9F9F9]">
+                    <button className=" w-full flex flex-row justify-center items-center px-8 py-4 gap-2 mt-4 lg:w-[192px] lg:h-[56px] bg-[#F9F9F9] hover:scale-105 transition-all duration-300 hover:bg-slate-300">
                         <span className="font-satoshi text-base text-center text-[#2A254B]">
                             View our products
                         </span>
@@ -50,7 +50,7 @@ export default function About() {
                         </p>
                     </div>
                     <Link href={"ProductListingBlog"}>
-                        <button className=" lg:mt-40 mt-7 w-full lg:w-[172px] lg:h-[56px] flex flex-row justify-center items-center px-6 py-3 bg-white/15 text-white text-sm">
+                        <button className=" lg:mt-40 mt-7 w-full lg:w-[172px] lg:h-[56px] flex flex-row justify-center items-center px-6 py-3 bg-white/15 text-white text-sm hover:bg-slate-500 hover:scale-105 transition-all duration-300">
                         <span className="font-satoshi text-center ">
                             View collection
                         </span>
