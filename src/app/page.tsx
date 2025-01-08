@@ -7,7 +7,6 @@ import Email from "./Homev1/email";
 import Features2 from "./Homev1/features2";
 import Footer from "./component/footer";
 
-
 export default function Home() {
   return (
  <div>

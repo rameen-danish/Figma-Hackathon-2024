@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DropdownButton from "../component/dropdown";
 
 export default function Filter() {
   const filters = [
@@ -30,13 +31,8 @@ export default function Filter() {
         <span className="text-[#2A254B] font-satoshi text-sm leading-6">
           Sorting by:
         </span>
-        <div className="flex items-center gap-2 px-3 py-2 h-12 bg-white ">
-          <span className="text-[#2A254B] font-satoshi text-sm leading-6">
-            Date Added
-          </span>
-          <Image src="/Caret--down.png" alt="Sorting" width={16} height={16} />
+        <DropdownButton />
         </div>
       </div>
-    </div>
   );
 }
