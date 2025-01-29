@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "../ProductListing/header";
+import Navbar from "../../ProductListingBlog/[product]/header";
 import Footer from "../component/footer";
 import Features from "../Homev1/features";
 import Email from "../Homev1/email";

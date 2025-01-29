@@ -1,5 +1,6 @@
 import Image from "next/image";
-import DropdownButton from "../component/dropdown";
+import DropdownButton from "../(store)/component/dropdown";
+
 
 export default function Filter() {
   const filters = [

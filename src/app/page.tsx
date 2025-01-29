@@ -1,13 +1,33 @@
-import Navbar from "./component/header"
-import Homev1 from "./Homev1/hero-block";
-import Features from "./Homev1/features";
-import Listing1 from "./Homev1/listings";
-import Listing2 from "./Homev1/listings2";
-import Email from "./Homev1/email";
-import Features2 from "./Homev1/features2";
-import Footer from "./component/footer";
+import Navbar from "./(store)/component/header"
+import Homev1 from "./(store)/Homev1/hero-block";
+import Features from "./(store)/Homev1/features";
+import Listing1 from "./(store)/Homev1/listings";
+import Listing2 from "./(store)/Homev1/listings2";
+import Email from "./(store)/Homev1/email";
+import Features2 from "./(store)/Homev1/features2";
+import Footer from "./(store)/component/footer";
+import {client} from "@/sanity/lib/client";
 
-export default function Home() {
+const getProducts = async () =>{
+  const products = await client.fetch(
+    `
+    *[_type=="product"][0..4]{
+    _id,
+    name,
+    description,
+    quantity,
+    price,
+    "image_url":image.asset->url,
+    rating
+    }
+    `
+  )
+  return products
+}
+
+export default async function Home() {
+ const products = await getProducts()
+  console.log(products)
   return (
  <div>
   <Navbar/>

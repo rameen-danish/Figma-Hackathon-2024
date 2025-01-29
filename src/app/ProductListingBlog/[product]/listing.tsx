@@ -52,9 +52,9 @@ export default function Listing1() {
       </Link>
       {/* Button */}
       <div className="flex justify-center mt-10">
-        <button className="bg-[#F9F9F9] hover:bg-slate-500 text-[#2A254B] text-[16px] font-satoshi font-normal py-3 px-6 rounded transition-all">
+        <Link href={"/ProductListingBlog"}><button className="bg-[#F9F9F9] hover:bg-slate-500 text-[#2A254B] text-[16px] font-satoshi font-normal py-3 px-6 rounded transition-all">
           View Collection
-        </button>
+        </button></Link>
       </div>
     </div>
   );
