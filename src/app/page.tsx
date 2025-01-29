@@ -36,8 +36,9 @@ export default async function Home() {
   <Listing1/>
   <Listing2/>
   <Email/>
-  <Features2/>
+  <Features2/>                                                                                                                                                                              
   <Footer/>
  </div>
+
   );
 }
