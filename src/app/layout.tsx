@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { Provider } from "react-redux"; // Import the correct Provider from react-redux
-import store from "./cart/redux/store";
+import store from "@/app/cart/redux/store";
 
 const inter = Inter({ subsets: ["latin"] });
 
