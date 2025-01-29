@@ -1,7 +1,7 @@
 export default function Email() {
   return (
     // <!-- Email Sign-Up Section -->
-    <div className="w-full h-auto bg-[#F9F9F9] flex justify-center items-center py-10 px-4">
+    (<div className="w-full h-auto bg-[#F9F9F9] flex justify-center items-center py-10 px-4">
       {/* <!-- Container --> */}
       <div className="w-full max-w-[1273px] bg-white flex flex-col justify-center items-center p-6 md:p-10">
         {/* <!-- Text Content --> */}
@@ -33,6 +33,6 @@ export default function Email() {
           </button>
         </div>
       </div>
-    </div>
+    </div>)
   );
 }

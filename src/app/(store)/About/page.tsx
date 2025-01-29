@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import Navbar from "../../ProductListingBlog/[product]/header";
 import Footer from "../component/footer";

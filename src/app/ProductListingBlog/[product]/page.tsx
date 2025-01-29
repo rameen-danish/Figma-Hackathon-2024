@@ -1,6 +1,6 @@
 "use client"
 import Navbar from "./header";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Listing1 from "./listing";
 import Email from "@/app/(store)/Homev1/email";
 import Footer from "@/app/(store)/component/footer";
@@ -35,6 +35,7 @@ const Page = ({ params }: { params: { product: string } }) => {
   const [data, setData] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState<number>(1); // Default quantity set to 1
   const dispatch = useDispatch();
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // Modal state
   const [popupMessage, setPopupMessage] = useState<string | null>(null);
   const [cartItems, setCartItems] = useState();
   // const count = useSelector((state) => state.counter.value);
@@ -45,9 +46,7 @@ const Page = ({ params }: { params: { product: string } }) => {
     if (quantity > 1) setQuantity(quantity - 1); // Prevent going below 1
   };
 
-  function setIsModalOpen(arg0: boolean) {
-    throw new Error("Function not implemented.");
-  }
+  
    // Initialize Wishlist from localStorage
    useEffect(() => {
     const storedWishlist = localStorage.getItem("wishlist");
@@ -150,7 +149,9 @@ const handleAddToCart = () => {
       image: data?.image,
     });
   }
-
+  // function setIsModalOpen(arg0: boolean) {
+  //   throw new Error("Function not implemented.");
+  // }
   // Save the updated cart to localStorage
   localStorage.setItem("cart", JSON.stringify(existingCart));
 

@@ -1,15 +1,14 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 export default function Listing1() {
   return (
     // Listings Section
-    <div className="w-full h-auto bg-white py-10">
+    (<div className="w-full h-auto bg-white py-10">
       {/* Title */}
       <div className="text-[#2A254B] text-[24px] lg:text-[32px] leading-[39px] font-clash-display px-6 lg:px-20">
         New ceramics
       </div>
-
       {/* Product Cards */}
       <div className="mt-10 px-6 lg:px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Product Card 1 */}
@@ -82,7 +81,6 @@ export default function Listing1() {
           </div>
         </div>
       </div>
-
       {/* Button */}
       <div className="flex justify-center mt-10">
         <Link href="ProductListingBlog">
@@ -91,6 +89,6 @@ export default function Listing1() {
           </button>
         </Link>
       </div>
-    </div>
+    </div>)
   );
 }

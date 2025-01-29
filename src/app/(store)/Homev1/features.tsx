@@ -1,14 +1,13 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Features() {
   return (
     // <!-- Features Section -->
-    <div className="w-full bg-white px-6 py-10">
+    (<div className="w-full bg-white px-6 py-10">
       {/* <!-- Section Title --> */}
       <h3 className="text-center text-[20px] sm:text-[24px] font-['Clash_Display'] font-normal text-[#2A254B]">
         What makes our brand different
       </h3>
-
       {/* <!-- Feature Blocks Container --> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-8 max-w-5xl mx-auto ">
         {/* <!-- Feature Block 1 --> */}
@@ -60,6 +59,6 @@ export default function Features() {
           </p>
         </div>
       </div>
-    </div>
+    </div>)
   );
 }
