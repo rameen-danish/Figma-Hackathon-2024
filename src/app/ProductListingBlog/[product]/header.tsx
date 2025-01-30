@@ -8,7 +8,6 @@ export default function Navbar() {
       <div className="text-[24px] leading-[30px] font-[Clash Display] text-[#22202E]">
         <Link href={"/"}>Avion</Link>
       </div>
-
       {/* Navigation Links */}
       <div className="flex flex-wrap justify-center gap-6 mt-4 sm:mt-0">
         <Link href="#" className="text-[16px] leading-[22px] text-[#726E8D] hover:text-black transition">
