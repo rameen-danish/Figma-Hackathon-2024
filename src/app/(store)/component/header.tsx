@@ -88,7 +88,7 @@ export default function Navbar() {
           </div>
              {/* search bar end */}
 
-          <Link href={`/ProductListingBlog/cart`} className="w-[24px] h-[24px] flex items-center justify-center">
+          <Link href={`/cart`} className="w-[24px] h-[24px] flex items-center justify-center">
             <img src="Cart.png" alt="Cart" className="w-full h-full object-contain" />
           </Link>
           <button className="w-[24px] h-[24px] flex items-center justify-center">

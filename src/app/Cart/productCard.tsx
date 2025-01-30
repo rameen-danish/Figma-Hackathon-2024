@@ -1,4 +1,3 @@
-import Image from "next/legacy/image";
 import { Product } from "@/app/Data";
 
 interface ExtendedCardProps extends Product {
@@ -31,29 +30,29 @@ const ItemCard: React.FC<ExtendedCardProps> = ({
       />
       <div className="flex-1">
         <h5 className="font-clash text-lg text-darkPrimary">{name}</h5>
-        <p className="font-satoshi text-sm text-gray-700">Price: £{priceValue}</p>
+        <p className="font-satoshi mt-2 text-sm text-gray-700">Price: £{priceValue}</p>
         <div className="flex items-center mt-2 gap-2">
           <button
             onClick={onDecrease}
-            className="px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300"
+            className="px-2 mt-2 bg-gray-200 text-black rounded hover:bg-gray-300"
           >
             -
           </button>
-          <span className="px-4 py-1 text-gray-100 bg-darkPrimary rounded-md">
+          <span className="px-4 mt-2 text-white bg-[#2A254B]  rounded">
             {quantity}
           </span>
           <button
             onClick={onIncrease}
-            className="px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300"
+            className="px-2 mt-2 bg-gray-200 text-black rounded hover:bg-gray-300"
           >
             +
           </button>
         </div>
         <button
           onClick={onRemove}
-          className="mt-2 text-sm text-red-500 hover:underline"
+          className="mt-4 text-sm text-red-500 hover:underline"
         >
-          Remove
+          Remove from Cart
         </button>
       </div>
       <div className="md:pr-[19rem]">

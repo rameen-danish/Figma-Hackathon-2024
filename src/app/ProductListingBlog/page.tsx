@@ -69,9 +69,9 @@ const Products = async () => {
           ))}
         </div>
         <div className="flex justify-center py-8">
-          <Link href={"/"}>
-          <button className="w-[170px] h-[56px] bg-[#F9F9F9] flex items-center justify-center gap-[10px] box-border hover:bg-slate-300">
-            <span className="text-[#2A254B] text-[16px] leading-[150%] font-satoshi">
+          <Link href={"/ProductListingBlog"}>
+          <button className="w-[170px] h-[56px] bg-[#2A254B] flex items-center justify-center gap-[10px] box-border rounded-md hover:bg-[#1d1a38]">
+            <span className="text-white text-[16px] leading-[150%] font-satoshi">
               View Collection
             </span>
           </button>

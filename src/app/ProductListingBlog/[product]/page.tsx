@@ -8,10 +8,8 @@ import Features from "@/app/(store)/Homev1/features";
 import React, { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import {useSelector, useDispatch } from "react-redux";
-import { add } from "@/app/cart/redux/cartslice";
-import { increment , decrement } from "@/app/cart/redux/cartslice";import { products } from "@/app/Data";
-import Products from "../page";
-;
+import Link from "next/link";
+
 interface Product {
   id: any;
   stock: number;
@@ -92,7 +90,6 @@ const Page = ({ params }: { params: { product: string } }) => {
  if (!data) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      {/* <Loader /> */}
     </div>
   );
 }
@@ -149,9 +146,7 @@ const handleAddToCart = () => {
       image: data?.image,
     });
   }
-  // function setIsModalOpen(arg0: boolean) {
-  //   throw new Error("Function not implemented.");
-  // }
+  
   // Save the updated cart to localStorage
   localStorage.setItem("cart", JSON.stringify(existingCart));
 
@@ -256,9 +251,9 @@ const addItemToCart = (cartItem: any) => {
           <div className="flex items-center mt-8">
             <label className="mr-4 text-sm font-clash-display text-[#2A254B]">Amount:</label>
             <div className="flex items-center border bg-[#F9F9F9] px-4 py-2">
-              <button onClick={decrease} className="text-gray-400">-</button>
+              <button onClick={decrease} className="text-black rounded ">-</button>
               <p className="mx-2 text-[#2A254B]">{quantity}</p>
-              <button   onClick={increase} className="text-gray-400">+</button>
+              <button   onClick={increase} className="text-black">+</button>
             </div>
           </div>
 
@@ -267,8 +262,29 @@ const addItemToCart = (cartItem: any) => {
            className="bg-[#2A254B] text-white py-3 px-6 mt-8 rounded hover:bg-[#1d1a38]">
             Add to Cart
           </button>
+         <Link href={"../cart"}> <button
+          className="bg-[#2A254B] text-white py-3 md:m-3 px-6 mt-8 rounded hover:bg-[#1d1a38]">
+            Go to Cart
+          </button></Link>
         </div>
       </div>
+
+      {/* Popup Modal */}
+      {isModalOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-lg text-center">
+            <h3 className="text-xl text-darkPrimary">
+              {data?.name} successfully added to cart!
+            </h3>
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="mt-4 px-6  py-2 bg-[#2A254B] text-white rounded  hover:bg-[#1d1a38]"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Additional Sections */}
       <Listing1 />

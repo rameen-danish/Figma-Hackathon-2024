@@ -42,9 +42,10 @@ export default function Navbar() {
         </button>
 
         {/* Shopping Cart */}
+        <Link href={"/cart"}>
         <button className="w-5 h-5 flex items-center justify-center">
           <Image src={"/Cart.png"} alt="Cart" width={16} height={16} />
-        </button>
+        </button></Link>
 
         {/* User Avatar */}
         <button className="w-5 h-5 flex items-center justify-center">
