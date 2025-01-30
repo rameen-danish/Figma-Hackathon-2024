@@ -7,7 +7,6 @@ import Footer from "@/app/(store)/component/footer";
 import Features from "@/app/(store)/Homev1/features";
 import React, { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
-import {useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 
 interface Product {
@@ -32,7 +31,6 @@ const Page = ({ params }: { params: { product: string } }) => {
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [data, setData] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState<number>(1); // Default quantity set to 1
-  const dispatch = useDispatch();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // Modal state
   const [popupMessage, setPopupMessage] = useState<string | null>(null);
   const [cartItems, setCartItems] = useState();
@@ -94,37 +92,6 @@ const Page = ({ params }: { params: { product: string } }) => {
   );
 }
 
- // Add to Cart Functionality
-//  const handleAddToCart = async () => {
-//   const productId = productData.id ?? "default-id"; // Provide a fallback ID if undefined
-  
-//     const stock = productData.stock ?? 0;
-  
-//     if (stock <= 0) {
-//       alert("Product is out of stock!");
-//       return;
-//     }
-// const handleAddToCart = () => {
-//   if (!data) return;
-
-//   if (data.stock && data.stock <= 0) {
-//     alert("Product is out of stock!");
-//     return;
-//   }
-//   const cartItem = {
-//     _id: data.slug,
-//     title: data.name,
-//     price: data.price,
-//     image: data.image,
-//     quantity: 1,
-//     name: data.name,
-//     description: data.description,
-//   };
-
-//   dispatch(add(cartItem));
-//   alert("Item successfully added to cart!");
-
-// };
 const handleAddToCart = () => {
   const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
 
