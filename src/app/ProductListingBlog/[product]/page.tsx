@@ -279,5 +279,3 @@ const addItemToCart = (cartItem: any) => {
   );
 }
 export default Page;
-
-
